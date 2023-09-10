@@ -1,13 +1,17 @@
-import React from 'react'
 import Logo from '../../components/Logo/Logo'
 
+import './Header.sass'
+
 const Header = () => {
-  return (
-    <nav className="header">
-      <Logo />
-        SBH
-    </nav>
-  );
+
+    return (
+        <div className="header">
+            <nav className="header-nav">
+                <Logo />
+                <span>SBH</span>
+            </nav>
+        </div>
+    );
 };
 
 export default Header;

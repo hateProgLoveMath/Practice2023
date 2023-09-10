@@ -1,8 +1,9 @@
 import { useRef } from 'react'
+import { v4 } from 'uuid'
 
 interface SliderProps {
-    pics: string[];
-  }
+  pics: string[];
+}
   
 const Slider: React.FC<SliderProps> = ({ pics }: SliderProps) => {
   const ref = useRef(null);
@@ -14,13 +15,12 @@ const Slider: React.FC<SliderProps> = ({ pics }: SliderProps) => {
           <img
             key={v4()}
             className="product_card-slider__item"
-            src="https://uploads.adrenaline.com.br/chamadas/amd-ryzen-5-7600x1.jpg"
+            src="/workspaces/Practice2023/src/assets/images/TSPSO18.jpg"
             onMouseOver={() => console.log()}
           />
         ))}
       </div>
       <div className="product_card-slider__main">
-        <img className="product_card-slider__main-img" ref={ref} />
         <img src="" />
       </div>
     </div>

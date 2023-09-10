@@ -1,24 +1,33 @@
+import React from 'react';
+
 import ProductCard from "./ProductCard";
 
+import { Product } from '../../types/ProductList/Product.types'
 
-import { PRODUCTS } from '../../mock/ProductList';
+import './ProductList.sass'
 
-const ProductList = (catRef) => {
+interface ProductListProps {
+  products: Product[]
+}
+
+const ProductList = ({products}: ProductListProps) => {
 
   return (
-    <>
-      <h1 className="">
+    <div className="product-list">
+
+      <p className="">
         Каталог
-      </h1>
-      <section
-        className=""
-        ref={catRef}
-      >
-        {PRODUCTS.map((product) => (
+      </p>
+
+      <section className="product-list_products">
+
+        {products.map((product) => (
           <ProductCard key={product._id} product={product}/>
         ))}
+
       </section>
-    </>
+
+    </div>
   );
 };
 
