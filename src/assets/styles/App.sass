@@ -1,8 +1,37 @@
+*, *:after, *:before
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+img
+  max-width: 100%
+
+
 %product-card_full
   display: flex
 
 .message
   @extend %product-card_full
 
-.product_card-slider__slider
-  @extend 
+// Button
+
+.button-ui
+  text-decoration: none
+  border-radius: 8px
+  cursor: pointer
+  display: inline-block
+  font-size: 16px
+  height: 40px
+  line-height: 38px
+  min-width: 138px
+  outline: none
+  overflow: hidden
+  padding: 0
+  text-align: center
+
+.button-ui.button-ui_passive
+  background: #fff
+  border: 1px solid #d9d9d9
+  color: #333
+
+.button-ui.buy-button
