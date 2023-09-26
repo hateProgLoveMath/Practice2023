@@ -1,23 +1,20 @@
-import React from 'react';
 import Home from './pages/Home/Home'
 import { Navigate, RouteObject, useRoutes } from "react-router-dom";
 
 // import { Routes, Route } from 'react-router-dom'
 import './assets/styles/App.sass'
+import ProductPage from './pages/ProductPage/ProductPage';
 
-
-function App() {
+const App = () => {
   const routes: RouteObject[] = [
-    { path: "/", element: <Navigate to="Home" /> },
-    // { path: "*", element: <NotFoundComponent /> }
+    { path: "/", element: <Home /> },
+    { path: "/product/:id", element: <ProductPage /> }
   ];
 
   const appRoutes = useRoutes(routes);
 
   return (
     <div className="App">
-      <Home />
-
       {appRoutes}
     </div>
   );

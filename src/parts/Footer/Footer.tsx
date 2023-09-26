@@ -6,16 +6,16 @@ import {
 
 const Footer = () => {
 
-    return (
-        <div className="footer">
-            <span className="">
-                <a href="https://github.com/Kelrogg">
-                    <AiFillGithub className="" />
-                </a>
-            </span>
-            <span >By SBH 2023</span>
-        </div>
-    )
+  return (
+    <div className="footer">
+      <div className="links">
+        <a href="https://github.com/Kelrogg">
+          <AiFillGithub className="" />
+        </a>
+        <div >By SBH 2023</div>
+      </div>
+    </div>
+  )
 }
 
 export default Footer;

@@ -15,9 +15,9 @@ const ProductList = ({products}: ProductListProps) => {
   return (
     <div className="product-list">
 
-      <p className="">
-        Каталог
-      </p>
+      <div className="product-list_header">
+        <p> Каталог </p>
+      </div>
 
       <section className="product-list_products">
 
